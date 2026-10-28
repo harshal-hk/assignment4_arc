@@ -1,0 +1,185 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main Section */
+.pricing-section {
+    max-width: 1100px;
+    margin: 130px auto 60px;
+    padding: 0 20px;
+}
+
+.pricing-section h1 {
+    color: #ff693b;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Pricing Cards Layout */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 29px;
+    align-items: stretch;
+}
+
+/* Individual Card */
+.pricing-card {
+    background-color: #29343d;
+    border-radius: 15px;
+    padding: 20px 19px 18px;
+    min-height: 445px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 105, 59, 0.12);
+}
+
+/* Card Icons */
+.card-icon {
+    height: 34px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 29px;
+    color: #f5f7fa;
+    margin-bottom: 10px;
+}
+
+.card-icon.orange {
+    color: #ff693b;
+}
+
+/* Price */
+.price {
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.amount {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.period {
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+/* Description */
+.pricing-card h3 {
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 23px;
+}
+
+/* Features */
+.pricing-card ul {
+    padding-left: 21px;
+    margin-bottom: 25px;
+}
+
+.pricing-card li {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-left: 1px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.plan-button {
+    width: 100%;
+    min-height: 48px;
+    margin-top: auto;
+
+    border: none;
+    border-radius: 15px;
+    background-color: #fff;
+    color: #23303a;
+
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+.plan-button:hover {
+    background-color: #e8e8e8;
+}
+
+/* Highlighted Middle Card */
+.featured .plan-button {
+    background-color: #ff693b;
+    color: #fff;
+}
+
+.featured .plan-button:hover {
+    background-color: #f35426;
+}
+
+/* Tablet */
+@media (max-width: 850px) {
+    .pricing-section {
+        margin-top: 70px;
+    }
+
+    .pricing-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .pricing-section {
+        margin-top: 45px;
+        padding: 0 18px;
+    }
+
+    .pricing-section h1 {
+        font-size: 30px;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pricing-card {
+        min-height: 420px;
+    }
+
+    .amount {
+        font-size: 36px;
+    }
+}
